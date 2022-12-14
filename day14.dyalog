@@ -18,9 +18,10 @@ fall ← {next ← fall_step ⍵ ⋄ ⍵≡next: next ⋄ ∇next}
 add_sand ← {new_x new_y ← fall sand_x sand_y ⋄ grid[new_y;new_x] ← 'o' ⋄ new_y=(2+max_y):⍵ ⋄ ∇⍵+1}
 add_sand 0 ⍝ part1
 
+
+⍝ #### PART 2 ####
+
 v_x_max v_y_max ← ⊃⌈/⊃,/vertices
-
-
 
 ⍝ add floor - at least max_y width available either side of the sand, plus a little buffer
 floor_x_min ← 496 - v_y_max
